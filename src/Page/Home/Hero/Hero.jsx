@@ -5,7 +5,7 @@ import { MdDownload } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="hero bg-base-200 flex flex-col-reverse md:flex-row items-center w-11/12 mx-auto py-8">
+    <div className="hero  flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-8">
       {/* Text Section */}
       <div className="md:w-1/2 p-6 text-center md:text-left">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
