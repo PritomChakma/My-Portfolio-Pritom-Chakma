@@ -57,7 +57,7 @@ const Hero = () => {
           <a
             href="/path-to-resume.pdf"
             download
-            className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg flex items-center gap-2 justify-center w-fit mx-auto md:mx-0"
+            className="bg-[#ff4d05] text-white py-2 px-4 rounded-lg flex items-center gap-2 justify-center w-fit mx-auto md:mx-0"
           >
             <MdDownload />
             Download Resume
