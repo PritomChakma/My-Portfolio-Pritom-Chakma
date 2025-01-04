@@ -9,20 +9,20 @@ const Hero = () => {
     <div className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0">
       {/* Text Section */}
       <div className="md:w-1/2">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-gray-800">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 ">
           Hi, I'm <span className="text-[#ff4d05]">Pritom</span>
         </h1>
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-700 mb-6">
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6">
           A Professional Front-End Developer
         </h2>
 
-        <p className="text-gray-600 mt-4 text-base sm:text-lg leading-relaxed">
+        <p className=" mt-4 text-base sm:text-lg leading-relaxed">
           I am a passionate front-end developer with a knack for crafting
           user-friendly, visually appealing, and highly responsive websites. I
           specialize in modern web technologies like{" "}
-          <span className="font-medium text-gray-800">React.js</span>,{" "}
-          <span className="font-medium text-gray-800">Tailwind CSS</span>, and{" "}
-          <span className="font-medium text-gray-800">JavaScript</span>. I
+          <span className="font-medium ">React.js</span>,{" "}
+          <span className="font-medium ">Tailwind CSS</span>, and{" "}
+          <span className="font-medium ">JavaScript</span>. I
           strive to deliver seamless user experiences and create meaningful
           digital solutions.
         </p>
@@ -33,7 +33,7 @@ const Hero = () => {
             to="https://github.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-[#ff4d05] text-2xl transition-colors duration-200"
+            className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
           >
             <FaGithub />
           </Link>
@@ -41,7 +41,7 @@ const Hero = () => {
             to="https://linkedin.com/in/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-[#ff4d05] text-2xl transition-colors duration-200"
+            className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
           >
             <FaLinkedin />
           </Link>
@@ -49,7 +49,7 @@ const Hero = () => {
             to="https://twitter.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-500 hover:text-[#ff4d05] text-2xl transition-colors duration-200"
+            className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
           >
             <FaTwitter />
           </Link>

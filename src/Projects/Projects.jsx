@@ -7,19 +7,19 @@ import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
-    <section className="w-11/12 mx-auto py-16" id="projects">
-      <h2 className="text-4xl font-bold text-center mb-8 text-gray-800">My Projects</h2>
+    <section className="w-11/12  mx-auto py-16" id="projects">
+      <h2 className="text-4xl font-bold text-center mb-8 ">My Projects</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {/* Project 1 */}
-        <div className="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <div className=" p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-800">
           <img
             src={project1} // Replace with your project image
             alt="Project One"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
-          <h3 className="text-2xl font-semibold mb-4 text-gray-800">Coffee Store</h3>
-          <p className="text-lg text-gray-600 mb-4">
+          <h3 className="text-2xl font-semibold mb-4">Coffee Store</h3>
+          <p className="text-lg  mb-4">
             A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
@@ -56,14 +56,14 @@ const Projects = () => {
         </div>
 
         {/* Project 2 */}
-        <div className="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <div className=" p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-800">
           <img
             src={project2} // Replace with your project image
             alt="Project Two"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
-          <h3 className="text-2xl font-semibold mb-4 text-gray-800">Volunteer Management</h3>
-          <p className="text-lg text-gray-600 mb-4">
+          <h3 className="text-2xl font-semibold mb-4 ">Volunteer Management</h3>
+          <p className="text-lg mb-4">
             A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
@@ -100,14 +100,14 @@ const Projects = () => {
         </div>
 
         {/* Project 3 */}
-        <div className="bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl">
+        <div className=" p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-800">
           <img
             src={project3} // Replace with your project image
             alt="Project Three"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
-          <h3 className="text-2xl font-semibold mb-4 text-gray-800">Gaming Review</h3>
-          <p className="text-lg text-gray-600 mb-4">
+          <h3 className="text-2xl font-semibold mb-4 ">Gaming Review</h3>
+          <p className="text-lg  mb-4">
             A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
@@ -147,7 +147,7 @@ const Projects = () => {
       {/* View More Button */}
       <div className="text-center mt-8">
         <Link
-          to="/projects"
+          to="/"
           className="bg-[#ff4d05] text-white btn btn-wide py-2 px-4 rounded-lg hover:bg-[#e14b05] transition-all duration-200 flex items-center justify-center gap-2"
         >
           View More Projects <FaArrowRight />
