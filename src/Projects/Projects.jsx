@@ -91,7 +91,7 @@ const Projects = () => {
               Live Demo
             </Link>
             <Link
-              to="/project-two-details"
+              to="/"
               className="bg-[#ff4d05] text-white btn btn-sm"
             >
               View Details
@@ -102,7 +102,7 @@ const Projects = () => {
         {/* Project 3 */}
         <div className=" p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-800">
           <img
-            src={project3} // Replace with your project image
+            src={project3} 
             alt="Project Three"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
@@ -135,7 +135,7 @@ const Projects = () => {
               Live Demo
             </Link>
             <Link
-              to="/project-three-details"
+              to="/"
               className="bg-[#ff4d05] text-white btn btn-sm"
             >
               View Details

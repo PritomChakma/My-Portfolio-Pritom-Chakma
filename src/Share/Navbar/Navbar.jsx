@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FaEnvelope, FaTools, FaUser } from "react-icons/fa";
-import { MdDownload } from "react-icons/md";
+import { FaEnvelope, FaProjectDiagram, FaTools, FaUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Logo from "../../assets/Logo.png";
@@ -21,7 +20,7 @@ const Navbar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="cursor-pointer flex items-center gap-2"
+          className="cursor-pointer flex items-center gap-2  hover:text-[#ff4d05] "
         >
           <FaUser /> About
         </ScrollLink>
@@ -33,9 +32,21 @@ const Navbar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="cursor-pointer flex items-center gap-2"
+          className="cursor-pointer flex items-center gap-2  hover:text-[#ff4d05] "
         >
           <FaTools /> My Skills
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink
+          to="projects"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="flex items-center gap-2  hover:text-[#ff4d05] cursor-pointer"
+        >
+          <FaProjectDiagram /> My Projects
         </ScrollLink>
       </li>
       <li>
@@ -45,7 +56,7 @@ const Navbar = () => {
           smooth={true}
           offset={-70}
           duration={500}
-          className="cursor-pointer flex items-center gap-2"
+          className="cursor-pointer flex items-center gap-2  hover:text-[#ff4d05] "
         >
           <FaEnvelope /> Contact
         </ScrollLink>
@@ -79,7 +90,7 @@ const Navbar = () => {
               />
             </svg>
           </label>
-          {isDropdownOpen && ( // Show dropdown only when `isDropdownOpen` is true
+          {isDropdownOpen && (
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] w-52 rounded-box bg-gray-900 text-white p-2 shadow-lg"
@@ -106,13 +117,18 @@ const Navbar = () => {
 
       {/* Navbar End */}
       <div className="navbar-end flex items-center gap-4 px-4">
-        <Link
-          to="/"
-          className="btn btn-sm bg-[#ff4d05] text-white flex items-center gap-2 py-2 px-4 rounded-lg transition-all hover:bg-[#e14b05]"
+        <ScrollLink
+          to="contact" // Scroll to the "contact" section
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="btn btn-sm bg-[#ff4d05] text-white flex items-center gap-2 py-2 px-4 rounded-lg transition-all hover:bg-[#e14b05] cursor-pointer"
         >
-          <span className="hidden sm:block">Download Resume</span>
-          <MdDownload className="text-lg" />
-        </Link>
+          <FaEnvelope className="text-lg" /> {/* Add the envelope icon */}
+          <span className="hidden sm:block">Hire Me</span>{" "}
+          {/* Text for larger screens */}
+        </ScrollLink>
       </div>
     </div>
   );

@@ -1,12 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import pritom from "../../../assets/MyImage.png";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
+import { Link } from "react-router-dom";
+import Resume from "../../../../public/irfan.pdf";
+import pritom from "../../../assets/MyImage.png";
 
 const Hero = () => {
   return (
-    <div className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0 mt-10">
+    <div
+      className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0 mt-10"
+      id="top"
+    >
       {/* Text Section */}
       <div className="md:w-1/2">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 ">
@@ -22,15 +26,14 @@ const Hero = () => {
           specialize in modern web technologies like{" "}
           <span className="font-medium ">React.js</span>,{" "}
           <span className="font-medium ">Tailwind CSS</span>, and{" "}
-          <span className="font-medium ">JavaScript</span>. I
-          strive to deliver seamless user experiences and create meaningful
-          digital solutions.
+          <span className="font-medium ">JavaScript</span>. I strive to deliver
+          seamless user experiences and create meaningful digital solutions.
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
           {/* Social Links */}
           <Link
-            to="https://github.com/yourusername"
+            to="https://github.com/PritomChakma"
             target="_blank"
             rel="noopener noreferrer"
             className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
@@ -38,7 +41,7 @@ const Hero = () => {
             <FaGithub />
           </Link>
           <Link
-            to="https://linkedin.com/in/yourusername"
+            to="https://github.com/PritomChakma"
             target="_blank"
             rel="noopener noreferrer"
             className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
@@ -46,26 +49,25 @@ const Hero = () => {
             <FaLinkedin />
           </Link>
           <Link
-            to="https://twitter.com/yourusername"
+            to="mailto:chakmapritom1@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
             className=" hover:text-[#ff4d05] text-2xl transition-colors duration-200"
           >
-            <FaTwitter />
+            <FaEnvelope />
           </Link>
         </div>
 
         <div className="mt-8">
           {/* Resume Download Button */}
-          <Link
-            to="/path-to-resume.pdf"
-            target="_blank"
-            download
+          <a
+            href={Resume}
+            download="irfan.pdf"
             className="bg-[#ff4d05] hover:bg-[#d83d04] text-white py-3 px-6 rounded-lg flex items-center gap-2 justify-center w-fit shadow-lg transition-all duration-200"
           >
             <MdDownload className="text-xl" />
             Download Resume
-          </Link>
+          </a>
         </div>
       </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa"; // Social Media Icons
-import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp, FaArrowUp, FaProjectDiagram, FaUser, FaEnvelope } from "react-icons/fa"; // Social Media and Quick Link Icons
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -14,19 +14,18 @@ const Footer = () => {
           </p>
           <div className="flex space-x-6 mt-4">
             {/* Social Media Icons */}
-            <Link to="https://github.com/PritomChakma" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/PritomChakma" target="_blank" rel="noopener noreferrer">
               <FaGithub className="text-2xl hover:text-[#333]" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/pritomchakma/" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://www.linkedin.com/in/pritomchakma/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="text-2xl hover:text-[#0077b5]" />
-            </Link>
-            <Link  to="https://web.facebook.com/pritom.chakma.716/" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://web.facebook.com/pritom.chakma.716/" target="_blank" rel="noopener noreferrer">
               <FaFacebook className="text-2xl hover:text-[#3b5998]" />
-            </Link>
-            
-            <Link to="https://wa.me/01613776556" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://wa.me/01613776556" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="text-2xl hover:text-[#25D366]" />
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -34,22 +33,54 @@ const Footer = () => {
         <div className="flex flex-col items-center lg:items-end">
           <h4 className="text-2xl font-semibold text-[#ff4d05] mb-4">Quick Links</h4>
           <div className="space-y-2">
-            <Link to="/about" className="text-gray-400 hover:text-[#ff4d05]">
-              About Me
-            </Link>
-            <Link to="/projects" className="text-gray-400 hover:text-[#ff4d05]">
-              My Projects
-            </Link>
-            <Link to="/contact" className="text-gray-400 hover:text-[#ff4d05]">
-              Contact Me
-            </Link>
+            <ScrollLink
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff4d05] cursor-pointer"
+            >
+              <FaUser /> About Me
+            </ScrollLink>
+            <ScrollLink
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff4d05] cursor-pointer"
+            >
+              <FaProjectDiagram /> My Projects
+            </ScrollLink>
+            <ScrollLink
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff4d05] cursor-pointer"
+            >
+              <FaEnvelope /> Contact Me
+            </ScrollLink>
           </div>
         </div>
       </div>
 
-      {/* Bottom Section - Copyright */}
-      <div className="mt-8 text-center text-gray-400">
-        <p>&copy; 2025 Pritom Chakma. All rights reserved.</p>
+      {/* Bottom Section - Scroll to Top and Copyright */}
+      <div className="mt-8 text-center">
+        <ScrollLink
+          to="top"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="flex items-center justify-center w-fit mx-auto bg-[#ff4d05] text-white py-2 px-4 rounded-lg cursor-pointer transition-all hover:bg-[#e14b05]"
+        >
+          <FaArrowUp className="mr-2" />
+          Back to Top
+        </ScrollLink>
+        <p className="mt-4 text-gray-400">&copy; 2025 Pritom Chakma. All rights reserved.</p>
       </div>
     </footer>
   );
