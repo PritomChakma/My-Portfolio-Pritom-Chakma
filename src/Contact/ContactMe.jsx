@@ -1,68 +1,87 @@
-import React, { useState } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa"; // Social Media Icons
+import React, { useRef } from "react";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaFacebook,
+  FaTwitter,
+  FaWhatsapp,
+} from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast"; // Import React Hot Toast
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // You can add your form submission logic here (like sending an email)
-    alert("Message Sent!");
+
+    emailjs
+      .sendForm(
+        "service_46deoup", // Your EmailJS service ID
+        "template_zwmsjym", // Your EmailJS template ID
+        form.current,
+        "2s9WzqUr-65rWNrjM" // Your EmailJS public key
+      )
+      .then(
+        () => {
+          toast.success("Message sent successfully!"); // Success toast message
+        },
+        (error) => {
+          toast.error(`Message failed to send: ${error.text}`); // Error toast message
+        }
+      );
+
+    e.target.reset(); // Reset the form after sending
   };
 
   return (
     <section className="w-11/12 mx-auto py-16" id="contact">
-      <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-800">Contact Me</h2>
+      <Toaster position="top-center" reverseOrder={false} /> {/* React Hot Toast */}
+
+      <h2 className="text-4xl font-extrabold text-center mb-10 text-gray-800">
+        Contact Me
+      </h2>
 
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Contact Form */}
         <div className="flex-1 bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h3>
-          <form onSubmit={handleSubmit}>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            Send a Message
+          </h3>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="mb-4">
-              <label htmlFor="name" className="text-gray-700">Your Name</label>
+              <label htmlFor="name" className="text-gray-700">
+                Your Name
+              </label>
               <input
                 type="text"
                 id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
+                name="from_name"
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4d05]"
                 required
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="email" className="text-gray-700">Your Email</label>
+              <label htmlFor="email" className="text-gray-700">
+                Your Email
+              </label>
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
+                name="from_email"
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4d05]"
                 required
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="message" className="text-gray-700">Your Message</label>
+              <label htmlFor="message" className="text-gray-700">
+                Your Message
+              </label>
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 rows="5"
                 className="w-full p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#ff4d05]"
                 required
@@ -79,16 +98,23 @@ const ContactMe = () => {
 
         {/* Contact Info */}
         <div className="flex-1 bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:shadow-2xl">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+            Contact Information
+          </h3>
           <p className="text-lg text-gray-600 mb-6">
-            Feel free to reach out to me for collaborations, job opportunities, or just a friendly chat. You can contact me via the following channels:
+            Feel free to reach out to me for collaborations, job opportunities,
+            or just a friendly chat. You can contact me via the following
+            channels:
           </p>
 
           <div className="space-y-6">
             {/* Email */}
             <div className="flex items-center space-x-4">
               <FaEnvelope className="text-[#ff4d05] text-xl" />
-              <Link to="mailto:chakmapritom1@gmail.com" className="text-gray-800 hover:text-[#ff4d05] font-medium text-lg">
+              <Link
+                to="mailto:chakmapritom1@gmail.com"
+                className="text-gray-800 hover:text-[#ff4d05] font-medium text-lg"
+              >
                 chakmapritom1@gmail.com
               </Link>
             </div>
@@ -145,7 +171,7 @@ const ContactMe = () => {
               </Link>
             </div>
 
-            {/* Twitter (New Addition) */}
+            {/* Twitter */}
             <div className="flex items-center space-x-4">
               <FaTwitter className="text-[#1DA1F2] text-xl" />
               <Link

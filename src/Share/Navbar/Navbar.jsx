@@ -1,4 +1,5 @@
 import React from "react";
+import { MdDownload } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -63,7 +64,7 @@ const Navbar = () => {
       {/* Navbar End */}
       <div className="navbar-end">
         <Link to="/resume" className="btn bg-[#ff4d05] text-white">
-          Download Resume
+          Download Resume      <MdDownload />
         </Link>
       </div>
     </div>
