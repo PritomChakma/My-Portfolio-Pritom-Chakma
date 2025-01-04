@@ -5,6 +5,7 @@ import Skills from "../Skills/Skills";
 import Hero from "./Hero/Hero";
 import ContactMe from "../../Contact/ContactMe";
 
+
 const Home = () => {
   return (
     <div>
@@ -22,6 +23,8 @@ const Home = () => {
 
       {/* Contact Section */}
       <ContactMe></ContactMe>
+
+    
     </div>
   );
 };

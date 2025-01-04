@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import pritom from "../../../assets/pritom.png";
+import pritom from "../../../assets/MyImage.png";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 
 const Hero = () => {
   return (
-    <div className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0">
+    <div className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0 mt-10">
       {/* Text Section */}
       <div className="md:w-1/2">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 ">
@@ -74,7 +74,7 @@ const Hero = () => {
         <img
           src={pritom}
           alt="Pritom"
-          className="max-w-full h-auto rounded-lg shadow-2xl object-cover"
+          className="max-w-full h-auto rounded-full shadow-2xl object-cover"
         />
       </div>
     </div>

@@ -135,7 +135,7 @@ const ContactMe = () => {
 
             {/* GitHub */}
             <div className="flex items-center space-x-4">
-              <FaGithub className="text-[#333] text-xl" />
+              <FaGithub className=" text-xl" />
               <Link
                 to="https://github.com/PritomChakma"
                 target="_blank"
