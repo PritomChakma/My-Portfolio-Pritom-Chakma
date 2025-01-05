@@ -2,7 +2,7 @@ import React from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Resume from "../../../../public/irfan.pdf";
+import myResume from "../../../../public/MyResume.pdf";
 import pritom from "../../../assets/MyImage.png";
 
 const Hero = () => {
@@ -61,7 +61,7 @@ const Hero = () => {
         <div className="mt-8">
           {/* Resume Download Button */}
           <a
-            href={Resume}
+            href={myResume}
             download="irfan.pdf"
             className="bg-[#ff4d05] hover:bg-[#d83d04] text-white py-3 px-6 rounded-lg flex items-center gap-2 justify-center w-fit shadow-lg transition-all duration-200"
           >
