@@ -60,8 +60,8 @@ const Hero = () => {
         <div className="mt-8">
           {/* Resume Download Button */}
           <a
-            href="/MyResume.pdf"
-            download="Pritom_Chakma_Resume.pdf"
+            href="/Resume_Of_Pritom_Chakma.pdf"
+            download="Resume_Of_Pritom_Chakma"
             className="bg-[#ff4d05] hover:bg-[#d83d04] text-white py-3 px-6 rounded-lg flex items-center gap-2 justify-center w-fit shadow-lg transition-all duration-200"
           >
             <MdDownload className="text-xl" />
