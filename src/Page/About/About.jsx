@@ -24,7 +24,7 @@ const About = () => {
           <p className="text-lg  leading-relaxed mb-6">
             Hi, I'm{" "}
             <span className="font-bold text-[#ff4d05]">Pritom Chakma!</span> A
-            3rd-year Computer Science and Engineering student at{" "}
+            4th-year Computer Science and Engineering student at{" "}
             <span className="font-medium">
               Port City International University
             </span>

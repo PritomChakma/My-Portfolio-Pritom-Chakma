@@ -18,30 +18,26 @@ const Projects = () => {
             alt="Project One"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
-          <h3 className="text-2xl font-semibold mb-4">Coffee Store</h3>
+          <h3 className="text-2xl font-semibold mb-4">
+            Medical Camp Management
+          </h3>
           <p className="text-lg  mb-4">
-            A brief description of the project goes here. Talk about the key
-            features, technologies used, and any challenges you overcame.
+            A responsive MERN stack platform for managing medical camps with
+            authentication, participant registration, payment integration, and
+            dynamic dashboards for users and organizers.
           </p>
           <div className="flex justify-between items-center mt-4">
             <Link
-              to="https://github.com/PritomChakma/coffee-store"
+              to="https://github.com/PritomChakma/PH-Assignment-12"
               target="_blank"
               className="text-blue-500 hover:underline"
             >
               GitHub Client
             </Link>
-            <Link
-              to="https://github.com/PritomChakma/coffee-store-server"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              GitHub Server
-            </Link>
           </div>
           <div className="flex justify-between items-center mt-4">
             <Link
-              to="https://coffee-store-48e62.web.app"
+              to="https://ph-assignment-112.web.app/"
               target="_blank"
               className="text-blue-500 hover:underline"
             >
@@ -76,13 +72,7 @@ const Projects = () => {
             >
               GitHub Client
             </Link>
-            <Link
-              to="https://github.com/PritomChakma/PH-Assignment-11-server"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              GitHub Server
-            </Link>
+  
           </div>
           <div className="flex justify-between items-center mt-4">
             <Link
@@ -121,13 +111,7 @@ const Projects = () => {
             >
               GitHub Client
             </Link>
-            <Link
-              to="https://github.com/PritomChakma/PH-Assignment-10-Server"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              GitHub Server
-            </Link>
+   
           </div>
           <div className="flex justify-between items-center mt-4">
             <Link
@@ -137,7 +121,10 @@ const Projects = () => {
             >
               Live Demo
             </Link>
-            <Link to="/project-three-details" className="bg-[#ff4d05] text-white btn btn-sm">
+            <Link
+              to="/project-three-details"
+              className="bg-[#ff4d05] text-white btn btn-sm"
+            >
               View Details
             </Link>
           </div>
@@ -147,7 +134,7 @@ const Projects = () => {
       {/* View More Button */}
       <div className="text-center mt-8">
         <Link
-          to="/"
+          to="/allProject"
           className="bg-[#ff4d05] text-white btn btn-wide py-2 px-4 rounded-lg hover:bg-[#e14b05] transition-all duration-200 flex items-center justify-center gap-2"
         >
           View More Projects <FaArrowRight />
