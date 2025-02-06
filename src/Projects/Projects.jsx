@@ -1,9 +1,9 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa"; // Importing the right arrow icon
+import { Link } from "react-router-dom";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -20,7 +20,8 @@ const Projects = () => {
           />
           <h3 className="text-2xl font-semibold mb-4">Coffee Store</h3>
           <p className="text-lg  mb-4">
-            A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
+            A brief description of the project goes here. Talk about the key
+            features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
             <Link
@@ -64,7 +65,8 @@ const Projects = () => {
           />
           <h3 className="text-2xl font-semibold mb-4 ">Volunteer Management</h3>
           <p className="text-lg mb-4">
-            A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
+            A brief description of the project goes here. Talk about the key
+            features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
             <Link
@@ -91,7 +93,7 @@ const Projects = () => {
               Live Demo
             </Link>
             <Link
-              to="/"
+              to="/project-two-details"
               className="bg-[#ff4d05] text-white btn btn-sm"
             >
               View Details
@@ -102,13 +104,14 @@ const Projects = () => {
         {/* Project 3 */}
         <div className=" p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-gray-800">
           <img
-            src={project3} 
+            src={project3}
             alt="Project Three"
             className="w-full h-40 object-cover rounded-t-lg mb-4 transition-transform transform hover:scale-110"
           />
           <h3 className="text-2xl font-semibold mb-4 ">Gaming Review</h3>
           <p className="text-lg  mb-4">
-            A brief description of the project goes here. Talk about the key features, technologies used, and any challenges you overcame.
+            A brief description of the project goes here. Talk about the key
+            features, technologies used, and any challenges you overcame.
           </p>
           <div className="flex justify-between items-center mt-4">
             <Link
@@ -134,10 +137,7 @@ const Projects = () => {
             >
               Live Demo
             </Link>
-            <Link
-              to="/"
-              className="bg-[#ff4d05] text-white btn btn-sm"
-            >
+            <Link to="/project-three-details" className="bg-[#ff4d05] text-white btn btn-sm">
               View Details
             </Link>
           </div>

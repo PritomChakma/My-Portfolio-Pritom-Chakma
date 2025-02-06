@@ -7,7 +7,7 @@ import pritom from "../../../assets/MyImage.png";
 const Hero = () => {
   return (
     <div
-      className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0 mt-10"
+      className="hero flex flex-col-reverse md:flex-row items-center md:w-11/12 mx-auto py-12 px-6 md:px-0"
       id="top"
     >
       {/* Text Section */}

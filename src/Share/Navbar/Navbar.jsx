@@ -65,7 +65,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-gray-900 shadow-md fixed top-0 left-0 w-full z-50">
+    <div className="navbar bg-gray-900 shadow-md sticky top-0 left-0 w-full z-10">
       {/* Navbar Start */}
       <div className="navbar-start flex items-center justify-between w-full px-4 py-2">
         {/* Dropdown for Mobile */}
