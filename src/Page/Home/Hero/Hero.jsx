@@ -219,7 +219,7 @@ const Hero = () => {
                       <div className="w-6 h-6 bg-gradient-to-br from-orange-400 to-amber-400 rounded-full"></div>
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-white">1+ Years</div>
+                      <div className="text-sm font-semibold text-white">1.5+ Years</div>
                       <div className="text-xs text-gray-400">Experience</div>
                     </div>
                   </div>

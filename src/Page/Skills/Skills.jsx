@@ -7,6 +7,13 @@ import ReactJs from "../../assets/React.png";
 import NodeJs from "../../assets/NodeJs.png";
 import ExpressJs from "../../assets/ExpressJs.png";
 import MongoDB from "../../assets/MongoDB.png";
+import Git from "../../assets/Git.png";
+import RestApi from "../../assets/Api.png";
+import NextJs from "../../assets/NextJs.png";
+import TypeScript from "../../assets/TypeScript.png";
+import Firebase from "../../assets/Firebase.png";
+import Redux from "../../assets/Redux.png";
+
 import { FaCode, FaServer, FaDatabase, FaLayerGroup, FaRocket, FaBrain } from "react-icons/fa";
 
 const Skills = () => {
@@ -49,12 +56,12 @@ const Skills = () => {
       color: "from-purple-500 to-pink-500",
       borderColor: "border-purple-500/20",
       skills: [
-        { name: "Git/GitHub", level: 90, color: "from-gray-700 to-gray-900" },
-        { name: "REST API", level: 88, color: "from-blue-400 to-indigo-400" },
-        { name: "Next.js", level: 85, color: "from-gray-500 to-gray-700" },
-        { name: "TypeScript", level: 80, color: "from-blue-600 to-blue-800" },
-        { name: "Firebase", level: 75, color: "from-yellow-500 to-orange-500" },
-        { name: "Redux", level: 85, color: "from-purple-500 to-pink-500" },
+        { name: "Git/GitHub", image:Git, level: 90, color: "from-gray-700 to-gray-900" },
+        { name: "REST API", image:RestApi, level: 88, color: "from-blue-400 to-indigo-400" },
+        { name: "Next.js", image:NextJs, level: 85, color: "from-gray-500 to-gray-700" },
+        { name: "TypeScript",image:TypeScript, level: 80, color: "from-blue-600 to-blue-800" },
+        { name: "Firebase", image:Firebase, level: 75, color: "from-yellow-500 to-orange-500" },
+        { name: "Redux", image:Redux, level: 85, color: "from-purple-500 to-pink-500" },
       ]
     }
   ];

@@ -8,7 +8,7 @@ const About = () => {
   const stats = [
     { number: "4th", label: "Year CSE", icon: <FaGraduationCap />, color: "from-cyan-500 to-blue-500" },
     { number: "30+", label: "Projects", icon: <FaCode />, color: "from-orange-500 to-red-500" },
-    { number: "1+", label: "Years Exp", icon: <FaRocket />, color: "from-green-500 to-emerald-500" },
+    { number: "1.5+", label: "Years Exp", icon: <FaRocket />, color: "from-green-500 to-emerald-500" },
     { number: "100%", label: "Passionate", icon: <FaLightbulb />, color: "from-purple-500 to-pink-500" },
   ];
 
